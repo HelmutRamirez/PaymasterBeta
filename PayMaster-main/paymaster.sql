@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-08-2024 a las 17:30:24
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 27-08-2024 a las 23:19:07
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -354,12 +354,29 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('1ozutz8vbphgibe8sv71mww643jeuzb7', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shazg:-Lul7t4FTwvZZ5l5YcZXaAwEZ7XBHvhqrngl5v-eeFs', '2024-08-23 20:44:48.069521'),
 ('1qwofk8w32tump3m56nfz4op0fhfy0te', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdt2B:VklyfzZkkpFSKYbTfrRk7bnw12QOFiA6SAi21D8_rEc', '2024-08-13 15:12:03.682892'),
+('4oan0lczs21wws8h2o609s6kwvtv0ev2', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shapV:lc-5hobXWfhMr2lCmKapckrpegN_m0Jnr3UmU_ldSiY', '2024-08-23 20:34:17.353987'),
 ('58zf57d453ukutxxpuzljtjfm91j1ei2', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdso4:_AdMkqfPqDy70-ZuzeTYBi4T2qsBifnguVG3tu0ViuU', '2024-08-13 14:57:28.557627'),
+('624kg3r1040z904nhxkl9nfronxfqvza', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1cJ:DE_I-aAEhVYORapJK-BXzsq8rvaoAw2HsLRVmKoT12Y', '2024-08-27 19:22:35.615029'),
+('96eksx6afy0dy3uoky5adkwxcqrnwkah', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbDn:bGMMedDXBX_-quhXuaZ6ZM0pfoGQFwOqgKYJRmvUhXA', '2024-08-23 20:59:23.390649'),
+('9w5r9r149k2xyviir7gnbme9prxdejv0', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbNk:kZ9H6MkEos9utHKdlL1rA0awUTel7A11BA2FHTqtm1Q', '2024-08-23 21:09:40.437381'),
+('a4fk3hdeo7te94v9qtsz93k3clekv8qw', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbYH:V4yMMYGvJ_B0VyUDguYzLi7BVoKcAaoRYXxBf0_DhQY', '2024-08-23 21:20:33.712386'),
+('a9qwp3uj2y15rwjsu9alzkg1j2495dkp', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1mR:SRgjE0e3mQGI3IKdMjA5K8tiApIhV2kFfytenQajbx4', '2024-08-27 19:33:03.758521'),
+('bjk8pe0v27oe8g4hl0l04pjz64for3v9', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2ep:aazEQlrgi9OPngYUVhEmw6yzKR0nbXXLnSDDI4XXffk', '2024-08-27 20:29:15.869532'),
+('cun4auturssxqoxjtnbnlyw6rdjotg6z', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2UL:1MzEC4KS7UVl_9pfltyUfqdjveZcze2hO0EKv5TLXqI', '2024-08-27 20:18:25.287553'),
 ('gm0c00rcfdxs9tfvop6rxml2wczdljvy', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdsLZ:KOXH9j_Y_5fly6Xp1eSCtv4b6d2IAg_tkKKCsDRCuYQ', '2024-08-13 14:28:01.481354'),
+('gp0irz8x3ctcxjt0qg3zk1qy4mqvhgt8', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1shZpj:cYIuTyycGd7fno85IOBmCWnWxiwnU7iOSGp5ug0f9RA', '2024-08-23 19:30:27.566763'),
 ('i81o5w9h1yldckfxszke3klvjwdq1fe0', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdrMT:WnWv8NNK8BpOTsfG6xL5X6mZ57Y1eHygmhsLVjanO10', '2024-08-13 13:24:53.375053'),
+('jj2dx5kdw0em0v4ynhbfrf113aza5cvx', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sgpQA:qhc6TaFBQXfO5PGegX3oQWPKn7mxSevn_3j9KliCsC0', '2024-08-21 17:56:58.089700'),
+('kxjxmujw42z4xhk78x723nnhht7lras5', '.eJxNyTEOgCAMBdC7_JkB48bqETwAIVCTDrSmhcl4d3Vzfe-CzE6mmRvJ4INrqaySCWmJcQ0gH6XpTv4q0rBJASdZZ1dHwqbyvSFgOtlf7gcG-CCJ:1sj35p:dAt6D6d-ZhcLnv3nUJSrFG_JcWQzoZEs40D08wfLeco', '2024-08-27 20:57:09.368667'),
 ('l8byttq53ll9n20og6fxc55sitdza4jg', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdt2B:VklyfzZkkpFSKYbTfrRk7bnw12QOFiA6SAi21D8_rEc', '2024-08-13 15:12:03.715774'),
-('oz2tkp2shs4dqzxrh1s2x39k6ay41uqn', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sds9p:jncrWY1WWaXK6HobMwiZVkhit38Zxkna-VXT0UCK6DY', '2024-08-13 14:15:53.630173');
+('oag5d71dqedhkpmkaidzcaubojbgptjx', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2ss:wrjQDHt0OiDlOt1LmHazoMLNPNcK0Tx2whS_HVx-_us', '2024-08-27 20:43:46.288943'),
+('oz2tkp2shs4dqzxrh1s2x39k6ay41uqn', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sds9p:jncrWY1WWaXK6HobMwiZVkhit38Zxkna-VXT0UCK6DY', '2024-08-13 14:15:53.630173'),
+('sh9tejlln3ni3tmtonkj2xtrmkcsrwpu', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1wS:cwCFx2hNENM0BisBCfNUifXqR8tgxbG4KxomBHHy25Q', '2024-08-27 19:43:24.407813'),
+('vw1606ndpebq7n7kx9dyjfmrrqlw0tk8', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2Bn:7H0CSGS93dRiZjNK1_GuMt4Xzzx0Xb1NnuRLoWRrW_E', '2024-08-27 19:59:15.749137'),
+('x16qybycdlctslmk04etklq1ic4dekep', '.eJxNyTEOgCAMBdC7_JkB48bqETwAIVCTDrSmhcl4d3Vzfe-CzE6mmRvJ4INrqaySCWmJcQ0gH6XpTv4q0rBJASdZZ1dHwqbyvSFgOtlf7gcG-CCJ:1shc8M:J2jeg0YBX26fTk4wzVOQ7OS_D_JUttipfCvz7raukcI', '2024-08-23 21:57:50.353188'),
+('zngirmkidszkvnrxw352w1rzi5jc1444', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shaXL:enTDvQyX7e1RXc1pw2ga5kfZm4T0wh4_HGhaBN4xvdo', '2024-08-23 20:15:31.055583');
 
 -- --------------------------------------------------------
 
@@ -374,6 +391,14 @@ CREATE TABLE `empresarial_cargo` (
   `nivel_riesgo` varchar(10) NOT NULL,
   `id_nivel_grado_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `empresarial_cargo`
+--
+
+INSERT INTO `empresarial_cargo` (`id_cargo`, `nombre_cargo`, `descripcion_cargo`, `nivel_riesgo`, `id_nivel_grado_id`) VALUES
+(1, 'fhg', 'ghfdg', '2', 9),
+(2, 'fhg', 'ghfdg', '2', 9);
 
 -- --------------------------------------------------------
 
@@ -1511,6 +1536,15 @@ CREATE TABLE `empresarial_contrato` (
   `numero_identificacion_e_id` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empresarial_contrato`
+--
+
+INSERT INTO `empresarial_contrato` (`id_contrato`, `fecha_inicio`, `fecha_fin`, `horas_semanales`, `salario_asignado`, `estado`, `tipo_contrato`, `id_cargo_id`, `numero_identificacion_e_id`) VALUES
+(2, '2024-08-01', NULL, 48, 1400000, 'activo', 'Termino fijo', 1, '1003'),
+(4, '2024-08-07', '2024-08-27', 48, 1300000, 'activo', 'Termino fijo', 1, '1000002'),
+(5, '2024-08-07', '2024-08-27', 48, 1300000, 'activo', 'Termino fijo', 2, '1000021212');
+
 -- --------------------------------------------------------
 
 --
@@ -1593,8 +1627,10 @@ CREATE TABLE `empresarial_empleado` (
 --
 
 INSERT INTO `empresarial_empleado` (`numero_identificacion_e`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `estado_civil`, `tipo_documento`, `correo`, `celular`, `genero`, `fecha_nacimiento`, `fecha_exp_documento`, `direccion`, `numero_cuenta_bancaria`, `banco`, `imagen_empleado`, `nit_id`, `id_nivel_estudio_id`) VALUES
-('1001', 'Marcos', NULL, 'Llanos', NULL, 'soltero', 'Soltero', 'helmutramirez8@gmail.com', '3122222', 'Masculino', '1985-08-01', '2005-08-08', 'calle12', '123456789', 'Bancolombia', 'photos/Coca_Cola_Logo10.jpg', NULL, 1),
-('1002', 'Lina', NULL, 'Baez', NULL, 'Soltero', 'Cédula', 'vanessa0812g@gmail.com', '3125454', 'Femenino', '2000-05-13', '2024-08-01', 'calle12 #45-5', '122222222', 'Davivienda', 'photos/Davivienda_logo_ExRXhSq.png', '1000000002', 1);
+('1000002', 'Helmut', NULL, 'Romero', NULL, 'fghfg', 'fdhgf', 'helmutramirez8@gmail.com', 'fghg', 'hgh', '2024-08-07', '2024-08-07', 'hg', 'dfhgfhfg', 'dfhhhg', 'photos/descarga_2.jpg', '18223', 1),
+('1000021212', 'Vanessa', NULL, 'Garcia', NULL, 'Soltero', 'Cédula', 'beligrofhel@gmail.com', '3025601200', 'Masculino', '2000-10-01', '2018-10-10', 'Av Call 45 N 100', '00000', '00', 'photos/descarga_1.jpg', NULL, 1),
+('1003', 'Contador', NULL, 'jefe', NULL, 'No indica', 'Cédula', '', '0000000', 'Otro', '2000-01-01', '2020-01-01', '00', '00000', '00', 'photos/descarga_2.jpg', NULL, 1),
+('4444444', 'hhhhh', 'h', 'hhh', NULL, 'hhh', 'hhh', 'ghtrytry', 'hhhh', 'hhh', '2024-08-08', '2024-08-07', 'hhrrr', 'hhh', 'hhh', 'hhhh', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1615,8 +1651,7 @@ CREATE TABLE `empresarial_empresa` (
 --
 
 INSERT INTO `empresarial_empresa` (`nit`, `razon_social`, `telefono_entidad`, `correo_entidad`, `imagen_empresa`) VALUES
-('1000000002', 'Sena ', '12345645', 'sena@gmail.com', ''),
-('1000000232', 'Coca-cola', '2355211', 'cocacola@gmail.com', '');
+('18223', 'Cocacolaf', '3177290760', '45645@gmail.com', 'photos/1_galileo-2.jpg');
 
 -- --------------------------------------------------------
 
@@ -1697,6 +1732,13 @@ CREATE TABLE `empresarial_nivelgrado` (
   `id_nivel_estudio_requerido_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empresarial_nivelgrado`
+--
+
+INSERT INTO `empresarial_nivelgrado` (`id_nivel_grado`, `tipo_nivel_grado`, `salario_minimo`, `salario_maximo`, `min_meses_expe`, `id_nivel_estudio_requerido_id`) VALUES
+(9, '1', 1.00, 1.00, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -1726,14 +1768,6 @@ CREATE TABLE `empresarial_passwordresetrequest` (
   `usuario_id` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `empresarial_passwordresetrequest`
---
-
-INSERT INTO `empresarial_passwordresetrequest` (`id`, `token`, `created_at`, `expires_at`, `used`, `usuario_id`) VALUES
-(1, '7EL4X6786iJKrbSgp3_uDTfCL_s', '2024-08-13 12:08:04.447021', '2024-08-13 12:23:04.447021', 1, '1001'),
-(2, 'TEopirXyfUR_3hD5_svh38LVCNQ', '2024-08-13 12:16:05.151379', '2024-08-13 12:31:05.151379', 1, '1001');
-
 -- --------------------------------------------------------
 
 --
@@ -1747,13 +1781,6 @@ CREATE TABLE `empresarial_sede` (
   `codigo_ciudad_id` varchar(10) NOT NULL,
   `nit_id` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `empresarial_sede`
---
-
-INSERT INTO `empresarial_sede` (`id_sede`, `nombre_sede`, `direccion_sede`, `codigo_ciudad_id`, `nit_id`) VALUES
-(12, 'CIDE', 'calle 121-555', '1004', '1000000002');
 
 -- --------------------------------------------------------
 
@@ -1778,7 +1805,7 @@ CREATE TABLE `empresarial_usuarios` (
   `estado_u` tinyint(1) NOT NULL,
   `contrasena` varchar(88) NOT NULL,
   `rol` varchar(30) NOT NULL,
-  `usuario_id` varchar(10) NOT NULL
+  `usuario_id` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -1786,8 +1813,9 @@ CREATE TABLE `empresarial_usuarios` (
 --
 
 INSERT INTO `empresarial_usuarios` (`id`, `intentos`, `estado_u`, `contrasena`, `rol`, `usuario_id`) VALUES
-(1, 0, 1, 'pbkdf2_sha256$600000$uZd7aFsEjcBTFMnTv22AKS$wJ9xECl7T5TwjLnhy6wYQp1FdqxQkSGA1aNqdG1oHg4=', 'RRHH', '1001'),
-(2, 0, 0, 'pbkdf2_sha256$600000$BJci057g17ulKGfZUGkCFO$T/U+SU2YSByVfllAZC2mCXqYOQRj2jc0uDt+/hV+W9Q=', 'Empleado General', '1002');
+(1, 0, 1, 'pbkdf2_sha256$720000$tqN5p1OEMgKc2xLoyXalNa$UldUIQH6qhwV+us4tS7alZcjqJ72KNsoCZ2n3QCj8k8=', 'Empleado General', '1000002'),
+(1004, 0, 1, 'pbkdf2_sha256$720000$tqN5p1OEMgKc2xLoyXalNa$UldUIQH6qhwV+us4tS7alZcjqJ72KNsoCZ2n3QCj8k8=', 'Contador', '1003'),
+(1005, 0, 0, 'pbkdf2_sha256$720000$A2R6frw5Uf6hlQkqmdkoxf$udN0v9lsXeUVnqAO+WyN+QcEDvkPGgXFWncUmoXXlfE=', 'Empleado General', '1000021212');
 
 -- --------------------------------------------------------
 
@@ -2186,13 +2214,13 @@ ALTER TABLE `django_migrations`
 -- AUTO_INCREMENT de la tabla `empresarial_cargo`
 --
 ALTER TABLE `empresarial_cargo`
-  MODIFY `id_cargo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_contrato`
 --
 ALTER TABLE `empresarial_contrato`
-  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_horasextrasrecargos`
@@ -2216,7 +2244,7 @@ ALTER TABLE `empresarial_nivelestudio`
 -- AUTO_INCREMENT de la tabla `empresarial_nivelgrado`
 --
 ALTER TABLE `empresarial_nivelgrado`
-  MODIFY `id_nivel_grado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_nivel_grado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_novedades`
@@ -2228,7 +2256,7 @@ ALTER TABLE `empresarial_novedades`
 -- AUTO_INCREMENT de la tabla `empresarial_passwordresetrequest`
 --
 ALTER TABLE `empresarial_passwordresetrequest`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_sede`
@@ -2246,7 +2274,7 @@ ALTER TABLE `empresarial_tiponovedad`
 -- AUTO_INCREMENT de la tabla `empresarial_usuarios`
 --
 ALTER TABLE `empresarial_usuarios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_vacacionescesantias`
@@ -2320,101 +2348,101 @@ ALTER TABLE `django_admin_log`
 -- Filtros para la tabla `empresarial_cargo`
 --
 ALTER TABLE `empresarial_cargo`
-  ADD CONSTRAINT `Empresarial_cargo_id_nivel_grado_id_e28439a9_fk_Empresari` FOREIGN KEY (`id_nivel_grado_id`) REFERENCES `empresarial_nivelgrado` (`id_nivel_grado`);
+  ADD CONSTRAINT `Empresarial_cargo_id_nivel_grado_id_e28439a9_fk_Empresari` FOREIGN KEY (`id_nivel_grado_id`) REFERENCES `empresarial_nivelgrado` (`id_nivel_grado`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_ciudad`
 --
 ALTER TABLE `empresarial_ciudad`
-  ADD CONSTRAINT `Empresarial_ciudad_codigo_departamento__4e5e90ae_fk_Empresari` FOREIGN KEY (`codigo_departamento_id`) REFERENCES `empresarial_departamento` (`codigo_departamento`);
+  ADD CONSTRAINT `Empresarial_ciudad_codigo_departamento__4e5e90ae_fk_Empresari` FOREIGN KEY (`codigo_departamento_id`) REFERENCES `empresarial_departamento` (`codigo_departamento`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_contrato`
 --
 ALTER TABLE `empresarial_contrato`
   ADD CONSTRAINT `Empresarial_contrato_id_cargo_id_80f05b5f_fk_Empresari` FOREIGN KEY (`id_cargo_id`) REFERENCES `empresarial_cargo` (`id_cargo`),
-  ADD CONSTRAINT `Empresarial_contrato_numero_identificacio_905132c5_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_contrato_numero_identificacio_905132c5_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_empleado`
 --
 ALTER TABLE `empresarial_empleado`
   ADD CONSTRAINT `Empresarial_empleado_id_nivel_estudio_id_80a4b3bd_fk_Empresari` FOREIGN KEY (`id_nivel_estudio_id`) REFERENCES `empresarial_nivelestudio` (`id_nivel_estudio`),
-  ADD CONSTRAINT `Empresarial_empleado_nit_id_2546394b_fk_Empresarial_empresa_nit` FOREIGN KEY (`nit_id`) REFERENCES `empresarial_empresa` (`nit`);
+  ADD CONSTRAINT `Empresarial_empleado_nit_id_2546394b_fk_Empresarial_empresa_nit` FOREIGN KEY (`nit_id`) REFERENCES `empresarial_empresa` (`nit`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_horasextrasrecargos`
 --
 ALTER TABLE `empresarial_horasextrasrecargos`
-  ADD CONSTRAINT `Empresarial_horasext_empleado_id_d4ad04a0_fk_Empresari` FOREIGN KEY (`empleado_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_horasext_empleado_id_d4ad04a0_fk_Empresari` FOREIGN KEY (`empleado_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_liquidacion`
 --
 ALTER TABLE `empresarial_liquidacion`
-  ADD CONSTRAINT `Empresarial_liquidac_numero_identificacio_0d245aaf_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_liquidac_numero_identificacio_0d245aaf_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_nivelgrado`
 --
 ALTER TABLE `empresarial_nivelgrado`
-  ADD CONSTRAINT `Empresarial_nivelgra_id_nivel_estudio_req_fab85f6d_fk_Empresari` FOREIGN KEY (`id_nivel_estudio_requerido_id`) REFERENCES `empresarial_nivelestudio` (`id_nivel_estudio`);
+  ADD CONSTRAINT `Empresarial_nivelgra_id_nivel_estudio_req_fab85f6d_fk_Empresari` FOREIGN KEY (`id_nivel_estudio_requerido_id`) REFERENCES `empresarial_nivelestudio` (`id_nivel_estudio`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_novedades`
 --
 ALTER TABLE `empresarial_novedades`
   ADD CONSTRAINT `Empresarial_novedade_id_tipo_novedad_id_ee8dc45f_fk_Empresari` FOREIGN KEY (`id_tipo_novedad_id`) REFERENCES `empresarial_tiponovedad` (`id_tipo_novedad`),
-  ADD CONSTRAINT `Empresarial_novedade_numero_identificacio_bfbc0f31_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_novedade_numero_identificacio_bfbc0f31_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_passwordresetrequest`
 --
 ALTER TABLE `empresarial_passwordresetrequest`
-  ADD CONSTRAINT `Empresarial_password_usuario_id_b0810459_fk_Empresari` FOREIGN KEY (`usuario_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_password_usuario_id_b0810459_fk_Empresari` FOREIGN KEY (`usuario_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_sede`
 --
 ALTER TABLE `empresarial_sede`
-  ADD CONSTRAINT `Empresarial_sede_codigo_ciudad_id_f23c010f_fk_Empresari` FOREIGN KEY (`codigo_ciudad_id`) REFERENCES `empresarial_ciudad` (`codigo_ciudad`),
-  ADD CONSTRAINT `Empresarial_sede_nit_id_8aba1de0_fk_Empresarial_empresa_nit` FOREIGN KEY (`nit_id`) REFERENCES `empresarial_empresa` (`nit`);
+  ADD CONSTRAINT `Empresarial_sede_codigo_ciudad_id_f23c010f_fk_Empresari` FOREIGN KEY (`codigo_ciudad_id`) REFERENCES `empresarial_ciudad` (`codigo_ciudad`) ON DELETE CASCADE,
+  ADD CONSTRAINT `Empresarial_sede_nit_id_8aba1de0_fk_Empresarial_empresa_nit` FOREIGN KEY (`nit_id`) REFERENCES `empresarial_empresa` (`nit`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_usuarios`
 --
 ALTER TABLE `empresarial_usuarios`
-  ADD CONSTRAINT `Empresarial_usuarios_usuario_id_a8e512cd_fk_Empresari` FOREIGN KEY (`usuario_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_usuarios_usuario_id_a8e512cd_fk_Empresari` FOREIGN KEY (`usuario_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `empresarial_vacacionescesantias`
 --
 ALTER TABLE `empresarial_vacacionescesantias`
-  ADD CONSTRAINT `Empresarial_vacacion_numero_identificacio_dee54d32_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`);
+  ADD CONSTRAINT `Empresarial_vacacion_numero_identificacio_dee54d32_fk_Empresari` FOREIGN KEY (`numero_identificacion_e_id`) REFERENCES `empresarial_empleado` (`numero_identificacion_e`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `independientes_calculos`
 --
 ALTER TABLE `independientes_calculos`
-  ADD CONSTRAINT `Independientes_calculos_documento_id_6e7fe83a_fk` FOREIGN KEY (`documento_id`) REFERENCES `independientes_independiente` (`numero_identificacion`);
+  ADD CONSTRAINT `Independientes_calculos_documento_id_6e7fe83a_fk` FOREIGN KEY (`documento_id`) REFERENCES `independientes_independiente` (`numero_identificacion`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `independientes_datoscalculos`
 --
 ALTER TABLE `independientes_datoscalculos`
-  ADD CONSTRAINT `Independientes_datoscalculos_documento_id_f03c1758_fk` FOREIGN KEY (`documento_id`) REFERENCES `independientes_independiente` (`numero_identificacion`);
+  ADD CONSTRAINT `Independientes_datoscalculos_documento_id_f03c1758_fk` FOREIGN KEY (`documento_id`) REFERENCES `independientes_independiente` (`numero_identificacion`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `independientes_passwordresetrequest`
 --
 ALTER TABLE `independientes_passwordresetrequest`
-  ADD CONSTRAINT `Independientes_passwordresetrequest_usuario_id_43e7994c_fk` FOREIGN KEY (`usuario_id`) REFERENCES `independientes_independiente` (`numero_identificacion`);
+  ADD CONSTRAINT `Independientes_passwordresetrequest_usuario_id_43e7994c_fk` FOREIGN KEY (`usuario_id`) REFERENCES `independientes_independiente` (`numero_identificacion`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `independientes_usuarios`
 --
 ALTER TABLE `independientes_usuarios`
-  ADD CONSTRAINT `Independientes_usuarios_usuario_id_0a88d212_fk` FOREIGN KEY (`usuario_id`) REFERENCES `independientes_independiente` (`numero_identificacion`);
+  ADD CONSTRAINT `Independientes_usuarios_usuario_id_0a88d212_fk` FOREIGN KEY (`usuario_id`) REFERENCES `independientes_independiente` (`numero_identificacion`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
