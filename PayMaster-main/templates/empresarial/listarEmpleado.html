@@ -14,7 +14,7 @@
       {% if request.session.estadoSesion %}
         {% if request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
           <h1>Lista de Empleados</h1>
-          <h3>Id empleado: {{ request.session.numero_identificacion }}</h3>
+          <h3>Id empleado: {{ request.session.numero_identificacion_e }}</h3>
           <h3>Rol: {{ request.session.permisos }}</h3>
 
           <table>
