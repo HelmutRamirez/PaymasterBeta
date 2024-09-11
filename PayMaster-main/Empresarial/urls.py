@@ -18,7 +18,7 @@ urlpatterns = [
     path('eliminarEmpre/<int:nit>/', views.GestionarEmpresa.eliminarEmpresa, name='eliminarempre'),
 
     #Gestion de empleado
-    path('empleados/', views.GestionEmpleado.EmpleadosContratar, name='empleadoss'),
+    path('empleados/<int:nit>', views.GestionEmpleado.EmpleadosContratar, name='empleadoss'),
     path('empleado/<int:numero_identificacion_e>', views.Paginas.homeEmpleado, name='homeEmpleado'),
     path('registroEmpleado/<int:nit>', views.GestionEmpleado.crearEmpleado, name='registroEmpleado'),
     path('listarEmpleados/<int:nit>', views.GestionEmpleado.ListarEmpleados, name='ListarEmpleados'), #redirecion para ver los empleados
@@ -26,6 +26,12 @@ urlpatterns = [
     path('actualizar/<int:numero_identificacion_e>/', views.GestionEmpleado.actualizarEmpleado, name='actualizarEmpleado'),
     path('eliminar/<int:numero_identificacion_e>/', views.GestionEmpleado.eliminarEmpleado, name='eliminaremple'),
     path('finalizaContra/<int:numero_identificacion_e>/', views.GestionEmpleado.cancelarContrato, name='terminarContrat'),
+    
+    #gestion de contratos
+    path('registroContrat/<int:numero_identificacion_e>/', views.GestionEmpleado.registroContrato, name='registContrat'),
+    path('contratacion/<int:numero_identificacion_e>/<int:nit>', views.GestionEmpleado.Contratacion, name='contratacion'),
+    
+    
     
     #Gestion de Calculos
     path('calcular/<int:numero_identificacion_e>/', views.CalculosGenerales.calcularSalario, name='calcularemple'),

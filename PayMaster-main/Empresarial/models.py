@@ -50,7 +50,8 @@ class NivelEstudio(models.Model):
     descripcion_nivel_estudio = models.CharField(max_length=30)
     estado_estudio= models.CharField(max_length=20,choices= [('Culminado','Culminado'),('Cursando', 'Cursando'),('Aplazado', 'Aplazado')])
     nivel_academico=models.CharField(max_length=20,choices= [('Primaria', 'Primaria'),('Secundaria', 'Secundaria'),('Media', 'Media'),('Técnico', 'Técnico'),('Tecnológico', 'Tecnológico'),('Pregrado', 'Pregrado'),('Especialización', 'Especialización'),('Maestría', 'Maestría'),('Doctorado', 'Doctorado')],)
-
+    def __str__(self):
+                return f'{self.descripcion_nivel_estudio}'
 
 class NivelGrado(models.Model):
     id_nivel_grado = models.AutoField(primary_key=True)

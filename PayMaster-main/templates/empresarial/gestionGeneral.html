@@ -15,9 +15,9 @@
   </head>
   <body>
     {% if request.session.estadoSesion %}
-      {% if request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
+      {% if request.session.permisos == 'Admin' %}
         <div class="contenedor">
-          <h1>Editar Empleado</h1>
+          <h1>Editar Uuarios</h1>
           
           <form action="{% url 'actualizarEmpleado' empleado.numero_identificacion %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}

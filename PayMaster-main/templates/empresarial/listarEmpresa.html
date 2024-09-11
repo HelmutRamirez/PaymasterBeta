@@ -120,10 +120,7 @@
           {% csrf_token %}
           <button class="opccion" type="submit">Cerrar Sesion</button>
         </form>
-        <form id="logout-form" method="POST" action="{% url 'empleadoss' %}">
-          {% csrf_token %}
-          <button class="opccion" type="submit">Lista de empleados</button>
-        </form>
+        
       </div>
       
     {% else %}

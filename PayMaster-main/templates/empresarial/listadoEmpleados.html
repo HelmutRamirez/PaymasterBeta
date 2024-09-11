@@ -13,7 +13,7 @@
     <div class="contenedor">
       {% if request.session.estadoSesion %}
         {% if request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
-          <h1>Lista de Empleados</h1>
+          <h1>Lista de candidatos para {{ empresa.razon_social }}</h1>
           <h3>Id empleado: {{ request.session.numero_identificacion_e }}</h3>
           <h3>Rol: {{ request.session.permisos }}</h3>
 
@@ -22,10 +22,9 @@
               <tr>
                 <th>Identificación</th>
                 <th>Nombre</th>
-                <th>Aniguedad</th>
                 <th>Correo</th>
-              
                 <th>Imagen</th>
+                <th>Estudios</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -37,11 +36,12 @@
                
                   <td>{{ empleados.correo }}</td>
                   <td>
-                    <img src="{{ empleados.empleado.imagen_empleado.url }}" alt="Imagen" width="50" />
+                    <img src="{{ empleados.imagen_empleado.url }}" alt="Imagen" width="50" />
                   </td>
+                  <td>{{ empleados.id_nivel_estudio }}</td>
                   <td>
                     {% if request.session.permisos == 'RRHH' %}
-                      <a class="a" href="{% url 'ListarEmpresa'  %}">Contratar empleado</a>
+                      <a class="a" href="{% url 'contratacion'  empleados.numero_identificacion_e empresa.nit %}">Contratar empleado</a>
                     {% endif %}
                     
                   </td>
@@ -50,7 +50,7 @@
             </tbody>
           </table>
           <div class="volverB">
-            <a class="link" href="{% url 'ListarEmpresa' %}">Volver</a>
+            <a class="link" href="{% url 'ListarEmpleados' empresa.nit %}">Volver</a>
             
           </div>
               

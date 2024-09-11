@@ -13,7 +13,7 @@
     <div class="contenedor">
       {% if request.session.estadoSesion %}
         {% if request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
-          <h1>Lista de Empleados</h1>
+          <h1>Lista de Empleados de {{ empresa.razon_social }} </h1>
           <h3>Id empleado: {{ request.session.numero_identificacion_e }}</h3>
           <h3>Rol: {{ request.session.permisos }}</h3>
 
@@ -33,8 +33,8 @@
               {% for empleado_data in empleados_con_antiguedad %}
                 <tr>
                   <td>{{ empleado_data.empleado.numero_identificacion_e }}</td>
-                  <td>{{ empleado_data.empleado.primer_nombre }} {{ empleado.primer_apellido }}</td>
-                  <td>{{ empleado_data.ingreso }} Antiguiedad {{ empleado_data.antiguedad }} dias</td>
+                  <td>{{ empleado_data.empleado.primer_nombre }} {{ empleado_data.empleado.primer_apellido }}</td>
+                  <td>Ingreso: {{ empleado_data.ingreso }} Antiguiedad: {{ empleado_data.antiguedad }} dias</td>
                   <td>{{ empleado_data.empleado.correo }}</td>
                   
                   <td>
@@ -44,9 +44,13 @@
                   <td>
                     {% if request.session.permisos == 'RRHH' %}
                       <a class="a" href="{% url 'editarEmpleado' empleado_data.empleado.numero_identificacion_e %}">Editar empleado</a> 
-                      <a class="a" href="{% url 'terminarContrat' empleado_data.empleado.numero_identificacion_e %}">Cancelar contrato</a><br>
-                      {% comment %} <a class="a" href="{% url 'contratoEmple' empleado_data.empleado.numero_identificacion_e %}">Ver contrato</a><br> {% endcomment %}
-                      <br>
+                      <a class="a" href="{% url 'terminarContrat' empleado_data.empleado.numero_identificacion_e %}">Cancelar contrato</a><br><br>
+                      
+                      {% if empleado_data.ingreso == 'Sin informacion' %}
+                      <a class="a" href="{% url 'registContrat' empleado_data.empleado.numero_identificacion_e %}">Registrar contrato</a><br><br>
+                      {% endif %}
+                        
+                      
                       {% comment %} <a class="a" href="{% url 'registroNovedades' empleado_data.empleado.numero_identificacion_e %}">Registrar Novedades</a> {% endcomment %}
                     {% endif %}
                      {% if request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'Admin' %}
@@ -68,6 +72,11 @@
               {% if request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}     
               <a class="opccion" href="{% url 'registroEmpleado' empresa.nit %}">Registrar empleado</a>
               {% endif %}
+              {% if request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}     
+              <a class="opccion" href="{% url 'empleadoss' empresa.nit %}">Contratacion</a>
+              {% endif %}
+
+             
         {% else %}
           <h1>El usuario no tiene permisos suficientes</h1>
         {% endif %}

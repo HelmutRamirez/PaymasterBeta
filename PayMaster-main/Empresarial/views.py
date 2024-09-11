@@ -3,7 +3,7 @@ from datetime import date, datetime
 from django.db.models import Sum,Q
 from django.utils import timezone # type: ignore
 from django.shortcuts import render, get_object_or_404, redirect # type: ignore
-from Empresarial.forms import EmpresaForm, EmpleadoForm,LoginForm, PasswordResetForm,RecuperarContrasenaForm,HorasExtrasRecargos
+from Empresarial.forms import ContratoForm, EmpresaForm, EmpleadoForm,LoginForm, PasswordResetForm,RecuperarContrasenaForm,HorasExtrasRecargos
 from .models import Contrato, Empresa, Empleado, Usuarios, Liquidacion,PasswordResetRequest
 from django.core.mail import send_mail # type: ignore
 from django.template.loader import render_to_string # type: ignore
@@ -211,12 +211,13 @@ class Paginas(HttpRequest):
 class GestionEmpleado(HttpRequest):
    
     def crearEmpleado(request, nit):
-        empresa = get_object_or_404(Empresa, nit=nit)  # Obtén la empresa basada en el NIT
+        empresa = get_object_or_404(Empresa, nit=nit)  
 
         if request.method == 'POST':
             formulario = EmpleadoForm(request.POST, request.FILES)
             if formulario.is_valid():
                 empleado = formulario.save(commit=False)
+                id_empleado=empleado.numero_identificacion_e
                 empleado.nit = empresa  # Asigna la empresa al empleado
                 empleado.save()
                 raw_password = empleado.primer_nombre + str(empleado.numero_identificacion_e) + '@'
@@ -228,27 +229,42 @@ class GestionEmpleado(HttpRequest):
                 )
                 usuario.set_password(raw_password)
                 usuario.save()
-                return redirect('ListarEmpleados', empresa.nit)
+                
+                return redirect('registContrat', id_empleado)
         else:
             formulario = EmpleadoForm(initial={'nit': empresa.nit})  # Inicializa el formulario con el valor de la empresa
 
         return render(request, 'empresarial/registroEmpleado.html', {'form': formulario, 'mensaje': 'ok', 'empresa': empresa.nit})
-        # Renderiza el formulario de registro de empleado ('registroEmpleado.html')
+        
 
-    def EmpleadosContratar(request):
+    def EmpleadosContratar(request,nit):
+        empresa=Empresa.objects.get(pk=nit)
         empleados_sin_empresa = Empleado.objects.filter(nit__isnull=True)
         empleados_filtrados = []
 
         for empleado in empleados_sin_empresa:
             caractere = len(empleado.numero_identificacion_e)
-            if caractere > 8:
+            if caractere > 6:
                 empleados_filtrados.append(empleado)
 
         data = {
-            'get_empleados': empleados_filtrados
+            'get_empleados': empleados_filtrados,
+            'empresa':empresa
         }
 
         return render(request, 'empresarial/listadoEmpleados.html', data)
+    def Contratacion(request, numero_identificacion_e, nit):
+    
+        empleado = Empleado.objects.get(pk=numero_identificacion_e)
+        empresa = Empresa.objects.get(nit=nit)
+        
+        empleado.nit = empresa
+        empleado.save() 
+        
+        return redirect('empleadoss',nit)
+            
+            
+        
     def ListarEmpleados(request, nit):
         try:
             # Obtén la empresa por su NIT
@@ -256,22 +272,32 @@ class GestionEmpleado(HttpRequest):
             
             # Filtra los empleados por la empresa
             get_empleados = Empleado.objects.filter(nit=empresa)
-           
+        
             empleados_con_antiguedad = []
             for empleado in get_empleados:
-                # Obtén el contrato más reciente del empleado
-                contrato = empleado.contrato_set.latest('fecha_inicio')
-                fecha_ingreso = contrato.fecha_inicio
-                estado_contrato = contrato.estado
-                # Calcula los días trabajados y la antigüedad
-                a, b, antiguedad_dias = CalculosGenerales.diasTrabajados(fecha_ingreso)
-                
-                empleados_con_antiguedad.append({
-                    'empleado': empleado,
-                    'ingreso': fecha_ingreso,
-                    'antiguedad': antiguedad_dias,
-                    'estado':estado_contrato
-                })
+                try:
+                    # Intenta obtener el contrato más reciente del empleado
+                    contrato = empleado.contrato_set.latest('fecha_inicio')
+                    fecha_ingreso = contrato.fecha_inicio
+                    estado_contrato = contrato.estado
+                    
+                    # Calcula los días trabajados y la antigüedad
+                    a, b, antiguedad_dias = CalculosGenerales.diasTrabajados(fecha_ingreso)
+                    
+                    empleados_con_antiguedad.append({
+                        'empleado': empleado,
+                        'ingreso': fecha_ingreso,
+                        'antiguedad': antiguedad_dias,
+                        'estado': estado_contrato
+                    })
+                except Contrato.DoesNotExist:
+                    # Si no hay contratos, agrega un registro con 'Sin informacion'
+                    empleados_con_antiguedad.append({
+                        'empleado': empleado,
+                        'ingreso': 'Sin informacion',
+                        'antiguedad': 'Sin informacion',
+                        'estado': 'Sin informacion'
+                    })
             
             data = {
                 'empleados_con_antiguedad': empleados_con_antiguedad,
@@ -279,6 +305,11 @@ class GestionEmpleado(HttpRequest):
             }
             
             return render(request, 'empresarial/listarEmpleado.html', data)
+        
+        except Empresa.DoesNotExist:
+            # Manejar el caso donde la empresa no existe
+            return render(request, 'empresarial/error.html', {'mensaje': 'Empresa no encontrada'})
+
     
         except Empresa.DoesNotExist:
             # Maneja el caso en el que no se encuentra la empresa
@@ -316,6 +347,36 @@ class GestionEmpleado(HttpRequest):
         usuario.estado_u=False
         usuario.save()
         return redirect('ListarEmpleados', nit=empresa)
+        
+        
+        
+    def registroContrato(request, numero_identificacion_e):
+            empleado = Empleado.objects.get(pk=numero_identificacion_e)
+            empresa = empleado.nit.nit
+
+            # Si la solicitud es GET, muestra el formulario vacío
+            if request.method == 'GET':
+                formulario = ContratoForm()  # Formulario vacío en caso de una solicitud GET
+
+            # Si la solicitud es POST, procesa el formulario enviado
+            elif request.method == 'POST':
+                formulario = ContratoForm(request.POST, request.FILES)
+                if formulario.is_valid():
+                    # Asigna el número de identificación antes de guardar
+                    contrato = formulario.save(commit=False)
+                     # Asigna el empleado al contrato
+                    contrato.estado = 'Activo'
+                    contrato.numero_identificacion_e = empleado 
+                    contrato.save()  # Guarda el contrato
+                    return redirect('ListarEmpleados', empresa)  # Redirige después de guardar
+
+            return render(request, 'empresarial/registroContrato.html', {
+                'form': formulario, 
+                'mensaje': 'ok', 
+                'id_empleado': numero_identificacion_e, 
+                'empresa': empresa
+            })
+
         
     def cancelarContrato(request, numero_identificacion_e):
         empleado = Empleado.objects.get(pk=numero_identificacion_e)

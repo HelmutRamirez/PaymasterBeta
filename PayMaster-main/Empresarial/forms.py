@@ -1,10 +1,26 @@
 
 from datetime import timedelta
 from django import forms   # type: ignore 
-from .models import Empleado,Usuarios,Empresa, Liquidacion,HorasExtrasRecargos
+from .models import Empleado,Usuarios,Empresa, Liquidacion,HorasExtrasRecargos,Contrato
 from django.core.exceptions import ValidationError # type: ignore
 from django.utils import timezone # type: ignore
 
+class ContratoForm(forms.ModelForm):
+    class Meta:
+        model = Contrato
+        fields = ['fecha_inicio','fecha_fin',
+                  'horas_semanales',
+                  'salario_asignado',
+                  'tipo_contrato',
+                  'id_cargo'
+                  ]
+        labels = {
+                    'id_cargo': 'Cargo',  # Cambia el nombre que aparecerá en el formulario
+                }
+        widgets = {
+            'fecha_inicio': forms.DateInput(attrs={'type': 'date'}, format='%Y-%m-%d'),
+            'fecha_fin': forms.DateInput(attrs={'type': 'date'}, format='%Y-%m-%d'),
+             }
 class EmpresaForm(forms.ModelForm):
     class Meta:
         model = Empresa
@@ -20,6 +36,9 @@ class EmpleadoForm(forms.ModelForm):
             'fecha_exp_documento','direccion','nit', 'imagen_empleado','numero_cuenta_bancaria',
             'banco','id_nivel_estudio'
         ]
+        labels = {
+                    'numero_identificacion_e': 'Numero de identificación',  # Cambia el nombre que aparecerá en el formulario
+                }
         widgets = {
             'nit': forms.HiddenInput(),
             'fecha_nacimiento': forms.DateInput(attrs={'type': 'date'}, format='%Y-%m-%d'),
