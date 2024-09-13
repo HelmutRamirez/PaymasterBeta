@@ -32,7 +32,7 @@
                 <td>{{ transporte|floatformat:"0" }}</td>
                 <td>{{ cesantias|floatformat:"0" }}</td>
                 <td>{{ intereses_cesantias|floatformat:"0" }}</td>
-                <td>Ingreso: {{ empleado.fecha_ingreso }},</br> {{ calculo.antiguedad|floatformat:"0" }} dias de antiguedad</td>
+                <td>Ingreso: {{ fecha_ingreso }},</br> {{ antiguedad|floatformat:"0" }} dias de antiguedad</td>
                 <td>{{ valor_vacaciones|floatformat:"0" }}</td>
                 <td>{{ dias_vacaciones|floatformat:"0" }}</td>
                 <td>{{ HorasExDiu|floatformat:"0" }}</td>
@@ -65,8 +65,8 @@
                 <th>ICBF</th>
                 <th>Caja de Compensación</th>
             </tr>
-            <tr><td>{{ calculo.salud_empeador|floatformat:"0" }}</td>
-                <td>{{ calculo.pension_empleador|floatformat:"0" }}</td>
+            <tr><td>{{ salud_empre|floatformat:"0" }}</td>
+                <td>{{ pension_empre|floatformat:"0" }}</td>
                 <td>{{ arl|floatformat:"0" }}</td>
                 <td>{{ sena|floatformat:"0" }}</td>
                 <td>{{ ICBF|floatformat:"0" }}</td>
@@ -95,7 +95,7 @@
         <br>
         <div class="volverB">
             {% if request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
-            <a class="a" href="{% url 'todos_los_calculos' empleado.numero_identificacion %}">Volver a ver nominas </a>
+            {% comment %} <a class="a" href="{% url 'todos_los_calculos' empleado.numero_identificacion %}">Volver a ver nominas </a> {% endcomment %}
             {% endif %}
        
         </div>
@@ -107,7 +107,7 @@
             <br>
         </div>
             {% if request.session.permisos == 'RRHH' or request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' %}
-            <a class="link" href="{% url 'ListarEmpleados' empleado.empresa.nit %}" class="btn btn-info">Volver a empleados</a>
+            <a class="link" href="{% url 'ListarEmpleados' empleado.nit.nit %}" class="btn btn-info">Volver a empleados</a> 
             {% endif %}
     </div>
 </body>

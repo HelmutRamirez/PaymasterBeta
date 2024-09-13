@@ -39,24 +39,15 @@
                 {% for calculo in calculos %}
                         
                 <tr>
-                    <td>{{ calculo.documento }}</td>
-                    <td>{{ calculo.salud }}</td>
-                    <td>{{ calculo.pension }}</td>
+                    <td>{{ calculo.numero_identificacion_e.numero_identificacion_e}}</td>
+                    <td>{{ calculo.salud_empleado }}</td>
+                    <td>{{ calculo.pension_empleado }}</td>
                     <td>{{ calculo.arl }}</td>
-                    <td>{{ calculo.transporte }}</td>
-                    <td>{{ calculo.salarioBase }}</td>
-                        {% if calculo.cajaCompensacion %}
-                    <td>{{ calculo.cajaCompensacion }}</td>
-                         {% endif %}
-                            {% if calculo.sena %}
-                    <td>{{ calculo.sena }}</td>
-                             {% endif %}
-                        {% if calculo.icbf %}
-                    <td>{{ calculo.icbf }}</td>
-                        {% endif %}
-                    <td>{{ calculo.fecha_calculos }}</td>
+                    <td>{{ calculo.total_antes_deducciones }}</td>
+
+                    <td>{{ calculo.fecha_calculo }}</td>
                    
-                    <td> <a class="a" href="{% url 'verNomina' documento=calculo.documento.numero_identificacion fecha=calculo.fecha_calculos %}">Ver nomina</a>
+                    <td> <a class="a" href="{% url 'verNomina' documento=calculo.numero_identificacion_e.numero_identificacion_e fecha=calculo.fecha_calculo %}">Ver nomina</a>
                        
                     </td>
                 </tr>
@@ -68,7 +59,7 @@
         
         <div class="volverB">
             {% if request.session.permisos == 'Contador' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'RRHH' or request.session.permisos == 'Admin' %}
-            <a class="a" href="{% url 'ListarEmpleados' nit=empleado.empresa.nit %}">Volver a empleados</a>
+            <a class="a" href="{% url 'ListarEmpleados' nit=empleado.nit.nit %}">Volver a empleados</a> 
             {% endif %}
        
         </div>

@@ -114,10 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'es'#Modificado para idioma  
+
+LANGUAGE_CODE = 'es'#Modificador para idioma  
 
 TIME_ZONE = 'America/Bogota'#agregado para hora colombia 
 
@@ -127,11 +126,7 @@ USE_TZ = True
 
 LANGUAGES = [
     ('es', 'Spanish'),
-]#agregado para idiomas 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
+]
 STATIC_URL = 'static/'
 STATIC_ROOT=BASE_DIR
 STATICFILES_DIRS=[
@@ -142,17 +137,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'p4ym4ster@gmail.com'  # Cambiar por tu dirección de correo
-EMAIL_HOST_PASSWORD = 'krwj apcj sols uowd'  # Cambiar por tu contraseña
+EMAIL_HOST_USER = 'p4ym4ster@gmail.com'  # dirección de correo
+EMAIL_HOST_PASSWORD = 'krwj apcj sols uowd'  #  contraseña o clave de acceso
 
 
 # Duración de la sesión en segundos (default: 2 semanas)
-SESSION_COOKIE_AGE = 60 * 10  # 15 minutos
-LOGOUT_REDIRECT_URL = '/accounts/login/'
-# Tiempo de expiración de sesión inactivo en segundos (default: None)
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # La sesión expira cuando se cierra el navegador
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

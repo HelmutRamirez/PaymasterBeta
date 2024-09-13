@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-08-2024 a las 23:19:07
+-- Tiempo de generación: 14-09-2024 a las 01:35:25
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -358,24 +358,37 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('1qwofk8w32tump3m56nfz4op0fhfy0te', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdt2B:VklyfzZkkpFSKYbTfrRk7bnw12QOFiA6SAi21D8_rEc', '2024-08-13 15:12:03.682892'),
 ('4oan0lczs21wws8h2o609s6kwvtv0ev2', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shapV:lc-5hobXWfhMr2lCmKapckrpegN_m0Jnr3UmU_ldSiY', '2024-08-23 20:34:17.353987'),
 ('58zf57d453ukutxxpuzljtjfm91j1ei2', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdso4:_AdMkqfPqDy70-ZuzeTYBi4T2qsBifnguVG3tu0ViuU', '2024-08-13 14:57:28.557627'),
+('5y8x7f0wvxl8ejnx3m4yfnv1vfacm9ge', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1so9Zs:0vx0rdThSuu_spDz7AXrjOxKceHU0JBtg1f21MZ7bXE', '2024-09-10 22:53:16.350535'),
 ('624kg3r1040z904nhxkl9nfronxfqvza', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1cJ:DE_I-aAEhVYORapJK-BXzsq8rvaoAw2HsLRVmKoT12Y', '2024-08-27 19:22:35.615029'),
+('7j0p0qf8ular10lldt5y35732h5x4iuc', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soAoC:fif8ar2ZZg8vhVWXal5dd01y7RFKGYFLnQTXReaFS7w', '2024-09-11 00:12:08.944219'),
 ('96eksx6afy0dy3uoky5adkwxcqrnwkah', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbDn:bGMMedDXBX_-quhXuaZ6ZM0pfoGQFwOqgKYJRmvUhXA', '2024-08-23 20:59:23.390649'),
 ('9w5r9r149k2xyviir7gnbme9prxdejv0', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbNk:kZ9H6MkEos9utHKdlL1rA0awUTel7A11BA2FHTqtm1Q', '2024-08-23 21:09:40.437381'),
 ('a4fk3hdeo7te94v9qtsz93k3clekv8qw', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shbYH:V4yMMYGvJ_B0VyUDguYzLi7BVoKcAaoRYXxBf0_DhQY', '2024-08-23 21:20:33.712386'),
 ('a9qwp3uj2y15rwjsu9alzkg1j2495dkp', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1mR:SRgjE0e3mQGI3IKdMjA5K8tiApIhV2kFfytenQajbx4', '2024-08-27 19:33:03.758521'),
+('aghcjcdpe9gbcpq5uw80g6nc63p2pnqq', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soB1q:jardODR7PqQxAaUqmeOoSoy3HU57q3qQES4x3d26vm0', '2024-09-11 00:26:14.572792'),
 ('bjk8pe0v27oe8g4hl0l04pjz64for3v9', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2ep:aazEQlrgi9OPngYUVhEmw6yzKR0nbXXLnSDDI4XXffk', '2024-08-27 20:29:15.869532'),
+('bqd6tlc4t4z2m6730ms9mjpzrbjehtb5', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj3e6:LO6ldkhTOh9YCgKUmiZnvo6orvoEroyeY_RRS84OJ9E', '2024-08-27 21:32:34.419514'),
+('cceunylwgpgetykshuilk0yvr83xmq34', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1so8uz:P2zaeOY5Q90Bu8Dx0wLNi4l-RzhMiHlLrFJSmdvZ0Kg', '2024-09-10 22:11:01.591893'),
 ('cun4auturssxqoxjtnbnlyw6rdjotg6z', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2UL:1MzEC4KS7UVl_9pfltyUfqdjveZcze2hO0EKv5TLXqI', '2024-08-27 20:18:25.287553'),
 ('gm0c00rcfdxs9tfvop6rxml2wczdljvy', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdsLZ:KOXH9j_Y_5fly6Xp1eSCtv4b6d2IAg_tkKKCsDRCuYQ', '2024-08-13 14:28:01.481354'),
+('gmy1gck6fjw0sm51p6cu3io0lmck35jp', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1so6nn:GZqMm41ehmZbAXDtml7JpNSodkIVQ2N4nKxvPMoMpVw', '2024-09-10 19:55:27.765916'),
 ('gp0irz8x3ctcxjt0qg3zk1qy4mqvhgt8', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1shZpj:cYIuTyycGd7fno85IOBmCWnWxiwnU7iOSGp5ug0f9RA', '2024-08-23 19:30:27.566763'),
+('hdhh10w7r9g0068e6o9c9oejs345a715', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soA5x:osh1_0SeVi9fShPwevLgl-wQEUCH7b3TAhEg0pkaDDo', '2024-09-10 23:26:25.805361'),
+('hq84x9fno6rbvdcq51yaxetk0qxg2i70', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soATL:04Jt-8bPZQn-3ujAquqhpU64BKC5JSddKyTBWMZ3eoI', '2024-09-10 23:50:35.550133'),
 ('i81o5w9h1yldckfxszke3klvjwdq1fe0', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdrMT:WnWv8NNK8BpOTsfG6xL5X6mZ57Y1eHygmhsLVjanO10', '2024-08-13 13:24:53.375053'),
 ('jj2dx5kdw0em0v4ynhbfrf113aza5cvx', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sgpQA:qhc6TaFBQXfO5PGegX3oQWPKn7mxSevn_3j9KliCsC0', '2024-08-21 17:56:58.089700'),
 ('kxjxmujw42z4xhk78x723nnhht7lras5', '.eJxNyTEOgCAMBdC7_JkB48bqETwAIVCTDrSmhcl4d3Vzfe-CzE6mmRvJ4INrqaySCWmJcQ0gH6XpTv4q0rBJASdZZ1dHwqbyvSFgOtlf7gcG-CCJ:1sj35p:dAt6D6d-ZhcLnv3nUJSrFG_JcWQzoZEs40D08wfLeco', '2024-08-27 20:57:09.368667'),
 ('l8byttq53ll9n20og6fxc55sitdza4jg', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sdt2B:VklyfzZkkpFSKYbTfrRk7bnw12QOFiA6SAi21D8_rEc', '2024-08-13 15:12:03.715774'),
+('mmovgz6wg3hal7v2mtxs95fgqlg2adoq', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soAeR:GSbLLUjfhIPsCKRvhuuboSBILdFKi_w-fAjo-Dq4Qgo', '2024-09-11 00:02:03.158908'),
+('ne2tpor7rhjjsz5s3jnj2k9bw932hipf', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1soAGB:ekAZcZ80BYFFddWV14fMlB3XkXhy6pjgrsTR56il5zo', '2024-09-10 23:36:59.478700'),
+('net8u2n85yvjdj0fyrnrgrifcl5naxvm', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1so9vM:vLUcI5BXFC_Y-uSmDWacdCovyraW1a9FKbuo-VECw7c', '2024-09-10 23:15:28.538470'),
 ('oag5d71dqedhkpmkaidzcaubojbgptjx', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2ss:wrjQDHt0OiDlOt1LmHazoMLNPNcK0Tx2whS_HVx-_us', '2024-08-27 20:43:46.288943'),
 ('oz2tkp2shs4dqzxrh1s2x39k6ay41uqn', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMSwiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiTWFyY29zIn0:1sds9p:jncrWY1WWaXK6HobMwiZVkhit38Zxkna-VXT0UCK6DY', '2024-08-13 14:15:53.630173'),
 ('sh9tejlln3ni3tmtonkj2xtrmkcsrwpu', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj1wS:cwCFx2hNENM0BisBCfNUifXqR8tgxbG4KxomBHHy25Q', '2024-08-27 19:43:24.407813'),
+('v76540ng60zm1j2nffni1677qigyt4hv', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1so963:-mmc6r6aHhXHXsqqUcSBAAn0KZe07H3ShrAjVVBuZTE', '2024-09-10 22:22:27.368445'),
 ('vw1606ndpebq7n7kx9dyjfmrrqlw0tk8', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1sj2Bn:7H0CSGS93dRiZjNK1_GuMt4Xzzx0Xb1NnuRLoWRrW_E', '2024-08-27 19:59:15.749137'),
 ('x16qybycdlctslmk04etklq1ic4dekep', '.eJxNyTEOgCAMBdC7_JkB48bqETwAIVCTDrSmhcl4d3Vzfe-CzE6mmRvJ4INrqaySCWmJcQ0gH6XpTv4q0rBJASdZZ1dHwqbyvSFgOtlf7gcG-CCJ:1shc8M:J2jeg0YBX26fTk4wzVOQ7OS_D_JUttipfCvz7raukcI', '2024-08-23 21:57:50.353188'),
+('xs81kxb6pz61akcibd1y1cxa4cscnbkt', '.eJxNyTEOgCAMBdC7_JkB48bqETwAIVCTDrSmhcl4d3Vzfe-CzE6mmRvJ4INrqaySCWmJcQ0gH6XpTv4q0rBJASdZZ1dHwqbyvSFgOtlf7gcG-CCJ:1so7eX:X9cLSVwNhEHTZWlmYQwRiIMRC5Mqy97q7BUS00t2Fj4', '2024-09-10 20:49:57.981813'),
 ('zngirmkidszkvnrxw352w1rzi5jc1444', 'eyJudW1lcm9faWRlbnRpZmljYWNpb25fZSI6MTAwMywiZXN0YWRvU2VzaW9uIjp0cnVlLCJwZXJtaXNvcyI6IlJSSEgiLCJ1c2VyIjoiQ29udGFkb3IifQ:1shaXL:enTDvQyX7e1RXc1pw2ga5kfZm4T0wh4_HGhaBN4xvdo', '2024-08-23 20:15:31.055583');
 
 -- --------------------------------------------------------
@@ -1541,9 +1554,13 @@ CREATE TABLE `empresarial_contrato` (
 --
 
 INSERT INTO `empresarial_contrato` (`id_contrato`, `fecha_inicio`, `fecha_fin`, `horas_semanales`, `salario_asignado`, `estado`, `tipo_contrato`, `id_cargo_id`, `numero_identificacion_e_id`) VALUES
-(2, '2024-08-01', NULL, 48, 1400000, 'activo', 'Termino fijo', 1, '1003'),
-(4, '2024-08-07', '2024-08-27', 48, 1300000, 'activo', 'Termino fijo', 1, '1000002'),
-(5, '2024-08-07', '2024-08-27', 48, 1300000, 'activo', 'Termino fijo', 2, '1000021212');
+(2, '2024-08-01', NULL, 48, 1300000, 'activo', 'Termino fijo', 1, '1003'),
+(4, '2024-08-07', NULL, 48, 1300000, 'activo', 'Termino fijo', 1, '1000002'),
+(5, '2024-08-07', NULL, 48, 1300000, 'activo', 'Termino fijo', 2, '1000021212'),
+(12, '2024-05-14', NULL, 48, 1300000, 'activo', 'Termino fijo', 1, '4444444'),
+(13, '2024-09-04', NULL, 42, 1300000, 'Activo', 'Termino Fijo', 1, '1212000554'),
+(14, '2024-06-03', NULL, 48, 1300000, 'Activo', 'Termino Fijo', 1, '1212777877'),
+(15, '2024-09-04', NULL, 45, 1300000, 'Activo', 'Termino Fijo', 1, '121277774');
 
 -- --------------------------------------------------------
 
@@ -1627,10 +1644,15 @@ CREATE TABLE `empresarial_empleado` (
 --
 
 INSERT INTO `empresarial_empleado` (`numero_identificacion_e`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `estado_civil`, `tipo_documento`, `correo`, `celular`, `genero`, `fecha_nacimiento`, `fecha_exp_documento`, `direccion`, `numero_cuenta_bancaria`, `banco`, `imagen_empleado`, `nit_id`, `id_nivel_estudio_id`) VALUES
-('1000002', 'Helmut', NULL, 'Romero', NULL, 'fghfg', 'fdhgf', 'helmutramirez8@gmail.com', 'fghg', 'hgh', '2024-08-07', '2024-08-07', 'hg', 'dfhgfhfg', 'dfhhhg', 'photos/descarga_2.jpg', '18223', 1),
-('1000021212', 'Vanessa', NULL, 'Garcia', NULL, 'Soltero', 'Cédula', 'beligrofhel@gmail.com', '3025601200', 'Masculino', '2000-10-01', '2018-10-10', 'Av Call 45 N 100', '00000', '00', 'photos/descarga_1.jpg', NULL, 1),
-('1003', 'Contador', NULL, 'jefe', NULL, 'No indica', 'Cédula', '', '0000000', 'Otro', '2000-01-01', '2020-01-01', '00', '00000', '00', 'photos/descarga_2.jpg', NULL, 1),
-('4444444', 'hhhhh', 'h', 'hhh', NULL, 'hhh', 'hhh', 'ghtrytry', 'hhhh', 'hhh', '2024-08-08', '2024-08-07', 'hhrrr', 'hhh', 'hhh', 'hhhh', NULL, 1);
+('1000002', 'Helmut', NULL, 'Romero', NULL, 'Soltero', 'Cédula', 'helmutramirez@gmail.com', '312121', 'Masculino', '2020-08-07', '2024-08-07', 'jhjjj', 'dfhgfhfg', 'dfhhhg', 'photos/descarga_2.jpg', '18223', 1),
+('1000021212', 'Vanessa', NULL, 'Garcia', NULL, 'Soltero', 'Cédula', 'beligrofhel@gmail.com', '3025601200', 'Masculino', '2000-10-01', '2018-10-10', 'Av Call 45 N 100', '00000', '00', 'photos/descarga_1.jpg', '18223', 1),
+('1003', 'Contador', NULL, 'jefe', NULL, 'No indica', 'Cédula', 'helmutramirez8@gmail.com', '0000000', 'Otro', '2000-01-01', '2020-01-01', '00', '00000', '00', 'photos/descarga_2.jpg', NULL, 1),
+('1212000554', 'Felipe', 'Enrique', 'TOrres', 'Carloe', 'Casado', 'Cédula', 'vanesa@gmail.com', '3158074034', 'Masculino', '2000-02-10', '2023-12-12', 'Cra. 18 #45-21', '10000', 'Bogota', 'photos/images_1.jpg', '546546512', 1),
+('121277774', 'Felipe', 'Enrique', 'TOrres', 'Carloe', 'Casado', 'Cédula', 'vanesstretdsa@gmail.com', '3158074504', 'Masculino', '2000-02-10', '2023-12-12', 'Cra. 18 #45-21', '10000', 'Bogota', 'photos/hubble.gif', '546546512', 1),
+('1212777777', 'Felipe', 'Enrique', 'TOrres', 'Carloe', 'Casado', 'Cédula', 'vanessdsa@gmail.com', '315807404', 'Masculino', '2000-02-10', '2023-12-12', 'Cra. 18 #45-21', '10000', 'Bogota', 'photos/images_1_o1T97QN.jpg', '18223', 1),
+('1212777877', 'Felipe', 'Enrique', 'TOrres', 'Carloe', 'Casado', 'Cédula', 'vaneqwqwsa@gmail.com', '3158074073', 'Masculino', '2000-10-10', '2024-09-06', 'Cra. 18 #45-21', '10000', '12121', 'photos/set-brown-binoculars-cartoon-style-260nw-2208129719.webp', '18223', 1),
+('1414141', 'Felipe', 'Enrique', 'TOrres', 'Carloe', 'Casado', 'Cédula', 'vanessdeffsa@gmail.com', '3158074074', 'Masculino', '2000-02-10', '2023-12-12', 'Cra. 18 #45-21', '10000', 'Bogota', 'photos/images.jpg', NULL, 1),
+('4444444', 'Felipe', NULL, 'TOrres', NULL, 'Casado', 'Cédula', 'ghtrytry@gmail.com', 'hhhh', 'Masculino', '2020-08-08', '2024-07-07', 'hhrrr', 'hhh', 'hhh', 'photos/images.jpg', '546546512', 1);
 
 -- --------------------------------------------------------
 
@@ -1651,7 +1673,8 @@ CREATE TABLE `empresarial_empresa` (
 --
 
 INSERT INTO `empresarial_empresa` (`nit`, `razon_social`, `telefono_entidad`, `correo_entidad`, `imagen_empresa`) VALUES
-('18223', 'Cocacolaf', '3177290760', '45645@gmail.com', 'photos/1_galileo-2.jpg');
+('18223', 'Cocacola', '3177290760', '45645@gmail.com', 'photos/1_galileo-2.jpg'),
+('546546512', 'Sena', '311', 'asdf@gmail.com', 'photos/descarga.jpg');
 
 -- --------------------------------------------------------
 
@@ -1696,6 +1719,15 @@ CREATE TABLE `empresarial_liquidacion` (
   `total_final` decimal(10,2) NOT NULL,
   `numero_identificacion_e_id` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `empresarial_liquidacion`
+--
+
+INSERT INTO `empresarial_liquidacion` (`id_liquidacion`, `fecha_inicio`, `fecha_fin`, `fecha_calculo`, `salud_empleado`, `pension_empleado`, `salud_empresa`, `pension_empresa`, `arl`, `caja_compensacion`, `vacaciones`, `cesantias`, `intereses_cesantias`, `total_antes_deducciones`, `total_final`, `numero_identificacion_e_id`) VALUES
+(29, '2024-09-01', '2024-09-30', '2024-09-13', 52000.00, 52000.00, 110500.00, 156000.00, 13572.00, 52000.00, 65000, 130000, 1560, 1462000.00, 1358000.00, '1000002'),
+(30, '2024-09-01', '2024-09-30', '2024-09-13', 52000.00, 52000.00, 110500.00, 156000.00, 13572.00, 52000.00, 65000, 130000, 1560, 1300000.00, 1358000.00, '1000002'),
+(32, '2024-09-01', '2024-09-30', '2024-09-13', 52000.00, 52000.00, 110500.00, 156000.00, 13572.00, 52000.00, 218472, 436944, 17623, 1300000.00, 1358000.00, '4444444');
 
 -- --------------------------------------------------------
 
@@ -1768,6 +1800,13 @@ CREATE TABLE `empresarial_passwordresetrequest` (
   `usuario_id` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empresarial_passwordresetrequest`
+--
+
+INSERT INTO `empresarial_passwordresetrequest` (`id`, `token`, `created_at`, `expires_at`, `used`, `usuario_id`) VALUES
+(4, 'ffLNA_HRYICIuvEZ_q8vG43vuRc', '2024-09-10 19:18:32.406177', '2024-09-10 19:33:32.406177', 1, '1003');
+
 -- --------------------------------------------------------
 
 --
@@ -1813,9 +1852,14 @@ CREATE TABLE `empresarial_usuarios` (
 --
 
 INSERT INTO `empresarial_usuarios` (`id`, `intentos`, `estado_u`, `contrasena`, `rol`, `usuario_id`) VALUES
-(1, 0, 1, 'pbkdf2_sha256$720000$tqN5p1OEMgKc2xLoyXalNa$UldUIQH6qhwV+us4tS7alZcjqJ72KNsoCZ2n3QCj8k8=', 'Empleado General', '1000002'),
-(1004, 0, 1, 'pbkdf2_sha256$720000$tqN5p1OEMgKc2xLoyXalNa$UldUIQH6qhwV+us4tS7alZcjqJ72KNsoCZ2n3QCj8k8=', 'Contador', '1003'),
-(1005, 0, 0, 'pbkdf2_sha256$720000$A2R6frw5Uf6hlQkqmdkoxf$udN0v9lsXeUVnqAO+WyN+QcEDvkPGgXFWncUmoXXlfE=', 'Empleado General', '1000021212');
+(1, 0, 1, 'pbkdf2_sha256$720000$uafZ3SkDrleIVh7yYw5ceP$tYApgz/vhT2mgL8UduRqN7YyxRSOxmPOdsctueEswEY=', 'Empleado General', '1000002'),
+(1004, 0, 1, 'pbkdf2_sha256$720000$uafZ3SkDrleIVh7yYw5ceP$tYApgz/vhT2mgL8UduRqN7YyxRSOxmPOdsctueEswEY=', 'Contador', '1003'),
+(1005, 0, 0, 'pbkdf2_sha256$720000$uafZ3SkDrleIVh7yYw5ceP$tYApgz/vhT2mgL8UduRqN7YyxRSOxmPOdsctueEswEY=', 'Empleado General', '1000021212'),
+(1006, 0, 0, 'pbkdf2_sha256$720000$jjXMNybru0kGcUabZt5t9I$DjayeMe2DHK6cfDH9z5BEM1TqipC1HahfwJZ+nGgYvw=', 'Empleado General', '1212000554'),
+(1007, 0, 0, 'pbkdf2_sha256$720000$g1wzqRjhLPVpMTXGtQxP8v$fpZ5JOpvYBc6udCvZGscv1G0tAMTWkaKvJyqfJjozOc=', 'Empleado General', '1212777777'),
+(1008, 0, 0, 'pbkdf2_sha256$720000$XOlcXGbYKnBUyUQjZ0yauI$sB7ZyVFvCfZpZYdbHVkIaWJPrD8MLOYYNabGRV04Lvs=', 'Empleado General', '1414141'),
+(1009, 0, 0, 'pbkdf2_sha256$720000$Kd4vaewdTULJOxr7yppIFn$ewPD5E4JkZCBU7lVX8jXW+xh3vcftY51yBw4T7AkPXk=', 'Empleado General', '121277774'),
+(1010, 0, 0, 'pbkdf2_sha256$720000$z52BhGJExPqsPioCsCVIss$UsHCHKtT8z+nPATRzQfxRW0/zK1wM/bMwzvG1ZlN1ng=', 'Empleado General', '1212777877');
 
 -- --------------------------------------------------------
 
@@ -1832,6 +1876,14 @@ CREATE TABLE `empresarial_vacacionescesantias` (
   `dias_vacaciones` int(11) DEFAULT NULL,
   `numero_identificacion_e_id` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `empresarial_vacacionescesantias`
+--
+
+INSERT INTO `empresarial_vacacionescesantias` (`id`, `vacaciones_acumulado`, `cesantias_acumuladas`, `intereses_cesantias`, `antiguedad`, `dias_vacaciones`, `numero_identificacion_e_id`) VALUES
+(8, 130000.00, 260000.00, 3120.00, 72, 2, '1000002'),
+(10, 218472.22, 436944.44, 17623.43, 121, 5, '4444444');
 
 -- --------------------------------------------------------
 
@@ -2220,7 +2272,7 @@ ALTER TABLE `empresarial_cargo`
 -- AUTO_INCREMENT de la tabla `empresarial_contrato`
 --
 ALTER TABLE `empresarial_contrato`
-  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_horasextrasrecargos`
@@ -2232,7 +2284,7 @@ ALTER TABLE `empresarial_horasextrasrecargos`
 -- AUTO_INCREMENT de la tabla `empresarial_liquidacion`
 --
 ALTER TABLE `empresarial_liquidacion`
-  MODIFY `id_liquidacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_liquidacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_nivelestudio`
@@ -2256,7 +2308,7 @@ ALTER TABLE `empresarial_novedades`
 -- AUTO_INCREMENT de la tabla `empresarial_passwordresetrequest`
 --
 ALTER TABLE `empresarial_passwordresetrequest`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_sede`
@@ -2274,13 +2326,13 @@ ALTER TABLE `empresarial_tiponovedad`
 -- AUTO_INCREMENT de la tabla `empresarial_usuarios`
 --
 ALTER TABLE `empresarial_usuarios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1011;
 
 --
 -- AUTO_INCREMENT de la tabla `empresarial_vacacionescesantias`
 --
 ALTER TABLE `empresarial_vacacionescesantias`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `independientes_calculos`
