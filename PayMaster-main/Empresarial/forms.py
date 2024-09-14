@@ -78,12 +78,12 @@ class EmpleadoForm(forms.ModelForm):
         #Este codigo permite bloquear los espacios pero afecta cuando se va a registrar un nuevo empleado, entonces hace falta adaptarlo solo para el fomrulario de modificar
         # ['numero_identificacion', 'primer_nombre', 'segundo_nombre', 'primer_apellido', 'segundo_apellido', 'estado_civil']
 
-    # def __init__(self, *args, **kwargs):
-    #     super(EmpleadoForm, self).__init__(*args, **kwargs)
-    #     readonly_fields = ['numero_identificacion', 'primer_nombre', 'segundo_nombre', 'primer_apellido', 'segundo_apellido']
-    #     for filtro in self.fields:
-    #         if filtro in readonly_fields:
-    #             self.fields[filtro].widget.attrs['readonly'] = True
+    def __init__(self, *args, **kwargs):
+        super(EmpleadoForm, self).__init__(*args, **kwargs)
+        readonly_fields = ['numero_identificacion', 'primer_nombre', 'segundo_nombre', 'primer_apellido', 'segundo_apellido']
+        for filtro in self.fields:
+            if filtro in readonly_fields:
+                self.fields[filtro].widget.attrs['readonly'] = True
 
 class LoginForm(forms.Form):
     numero_identificacion = forms.IntegerField(label='Número de identificación')
@@ -141,3 +141,25 @@ class HorasExtrasForm(forms.ModelForm):
             raise forms.ValidationError('La suma de horas no puede exceder 48.')
 
         return cleaned_data
+    
+    
+ 
+class UsuarioForm(forms.ModelForm):
+    ESTADO_CHOICES = [
+        (0, 'Activo'),
+        (1, 'Inactivo'),
+    ]
+    
+    estado_u = forms.ChoiceField(choices=ESTADO_CHOICES, label='Cargo')
+
+    class Meta:
+        model = Usuarios
+        fields = ['usuario', 'intentos', 'estado_u', 'contrasena', 'rol']
+        labels = {
+            'estado_u': 'Cargo',
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance and self.instance.pk:
+            self.fields['estado_u'].initial = self.instance.estado_u

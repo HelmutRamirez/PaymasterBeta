@@ -201,3 +201,4 @@ class HorasExtrasRecargos(models.Model):
         recargoDiuFes=models.IntegerField(blank=True,null=True)
         recargoNoc=models.IntegerField(blank=True,null=True)
         recargoNocFest=models.IntegerField(blank=True,null=True)
+        

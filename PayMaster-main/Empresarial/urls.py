@@ -35,7 +35,13 @@ urlpatterns = [
     
     #Gestion de Calculos
     path('calcular/<int:numero_identificacion_e>/', views.CalculosGenerales.calcularSalario, name='calcularemple'),
-    # path('registro_novedades/<int:numero_identificacion>/', views.CalculosGenerales.registroNovedades, name='registroNovedades'),
+    # path('registro_novedades/<int:numero_identificacion>/', views.CalculosGenerales.registroNovedades, name='registroNovedades'),novedades acaaaaaaaaaaaa
     path('calculos/<str:documento>/<str:fecha>/', views.CalculosGenerales.HistorialNomina, name='verNomina'),
-    path('todos_los_calculos<int:numero_identificacion_e>/', views.CalculosGenerales.obtener_todos_los_calculos, name='todos_los_calculos'),
+    path('todos_los_calculos/<int:numero_identificacion_e>/', views.CalculosGenerales.obtener_todos_los_calculos, name='todos_los_calculos'),
+
+    #gestion usuarios
+    path('usuarios/', views.GestionUsuarios.listar_usuarios, name='listar_usuarios'),
+    path('editar/<int:numero_identificacion_e>/', views.GestionUsuarios.modificarUsuario, name='editarUsuarioG'),
+    
+
 ]

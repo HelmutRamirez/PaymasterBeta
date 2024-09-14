@@ -2,10 +2,11 @@
 import calendar
 from datetime import date, datetime
 from decimal import Decimal
+from msilib.schema import ListView
 from django.db.models import Sum,Q
 from django.utils import timezone # type: ignore
 from django.shortcuts import render, get_object_or_404, redirect # type: ignore
-from Empresarial.forms import ContratoForm, EmpresaForm, EmpleadoForm,LoginForm, PasswordResetForm,RecuperarContrasenaForm,HorasExtrasRecargos
+from Empresarial.forms import ContratoForm, EmpresaForm, EmpleadoForm,LoginForm, PasswordResetForm,RecuperarContrasenaForm,HorasExtrasRecargos, UsuarioForm
 from .models import Cargo, Contrato, Empresa, Empleado, Usuarios, Liquidacion,PasswordResetRequest, vacacionesCesantias
 from django.core.mail import send_mail # type: ignore
 from django.template.loader import render_to_string # type: ignore
@@ -19,6 +20,8 @@ from django.utils.encoding import force_str # type: ignore
 from django.http import JsonResponse # type: ignore
 from django.views.decorators.http import require_POST # type: ignore
 import re
+from django.contrib.humanize.templatetags.humanize import intcomma
+
 
 
 class GestionLogin:
@@ -137,7 +140,7 @@ class GestionLogin:
 
                             data = {'independi': indepe}
 
-                            if permisos in ['Contador', 'Auxiliar Contable', 'RRHH']:
+                            if permisos in ['Contador', 'Auxiliar Contable', 'RRHH','Admin']:
                                 return redirect('ListarEmpresa')  # Redirigir a la lista de empresas
                             elif permisos == 'Empleado General':
                                 return redirect('homeEmpleado', numero_identificacion_e=numero_identificacion_e)  # Redirigir a la página de inicio del empleado
@@ -752,7 +755,7 @@ class CalculosGenerales(HttpRequest):
         empleado = get_object_or_404(Empleado, pk=documento)
         fecha = datetime.strptime(fecha, '%Y-%m-%d').date()
         calculos_empleado = Liquidacion.objects.filter(numero_identificacion_e=empleado, fecha_calculo=fecha)
-        empresa = empleado.nit.nit
+        empresa = empleado.nit
         calculo = calculos_empleado.first()
         contrato = Contrato.objects.filter(numero_identificacion_e=empleado).first()
         he = HorasExtrasRecargos.objects.filter(empleado=empleado).first()
@@ -767,7 +770,10 @@ class CalculosGenerales(HttpRequest):
         dias_trabajados_anteriores, dias_trabajados_actuales, dias_antiguedad = CalculosGenerales.diasTrabajados(dias_trabajados)
         vacacionesCesa=vacacionesCesantias.objects.filter(numero_identificacion_e=empleado).first()
         dias_vacaciones=vacacionesCesa.dias_vacaciones
-        trasnporte=162000
+        transporte=162000
+       
+        transporte_formatted = f"$ {intcomma(transporte)}"
+       
         context = {
             'empresa': empresa,
             'fecha': calculo.fecha_calculo,
@@ -781,9 +787,10 @@ class CalculosGenerales(HttpRequest):
             'dias_vacaciones': dias_vacaciones,
             'antiguedad':dias_antiguedad,
             'fecha_ingreso':contrato.fecha_inicio,
-            'transporte':trasnporte,
+            'transporte':transporte_formatted,
             'salud_empre':calculo.salud_empresa,
             'pension_empre':calculo.pension_empresa,
+            
             # 'HorasExDiu': calculo.HorasExDiu,
             # 'HorasExNoc': calculo.HorasExNoc,
             # 'HorasExFestivaDiu': calculo.HorasExFestivaDiu,
@@ -801,12 +808,41 @@ class CalculosGenerales(HttpRequest):
     def obtener_todos_los_calculos(request, numero_identificacion_e):
         empleado = get_object_or_404(Empleado, pk=numero_identificacion_e)
         todos_los_calculos = Liquidacion.objects.filter(numero_identificacion_e=empleado)
-        
+        nit = empleado.nit
+       
         # Prepara el contexto
         context = {
             'calculos': todos_los_calculos,
-            'empleado': empleado
+            'empleado': empleado,
+            'empresa': nit
         }
         
         # Renderiza la plantilla 'HistoricoGeneral.html' con el contexto generado
         return render(request, 'empresarial/HistoricoGeneral.html', context)
+
+        
+class GestionUsuarios(HttpRequest):
+    
+    
+    def listar_usuarios(request):
+        usuarios = Usuarios.objects.all()
+        return render(request, 'empresarial/gestionGeneral.html', {'usuarios': usuarios})
+    
+    
+    
+    
+    
+    def modificarUsuario(request, numero_identificacion_e):
+        usuario = get_object_or_404(Usuarios, usuario=numero_identificacion_e)
+        
+        if request.method == 'POST':
+            form = UsuarioForm(request.POST, instance=usuario)
+            if form.is_valid():
+                form.save()
+                return redirect('listar_usuarios')  # Redirige a la vista de lista de usuarios
+        else:
+            form = UsuarioForm(instance=usuario)
+        
+        return render(request, 'empresarial/modificacionUsuarios.html', {'form': form, 'usuario': usuario})
+    
+        
