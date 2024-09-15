@@ -41,7 +41,13 @@ urlpatterns = [
 
     #gestion usuarios
     path('usuarios/', views.GestionUsuarios.listar_usuarios, name='listar_usuarios'),
-    path('editar/<int:numero_identificacion_e>/', views.GestionUsuarios.modificarUsuario, name='editarUsuarioG'),
+    path('editar/<int:id_usu>/', views.GestionUsuarios.modificarUsuario, name='editarUsuarioG'),
+    path('crearUsuario//', views.GestionUsuarios.crear_usuario, name='creacionUsuario'),
     
-
+    #Actualizar porcentajes
+    # path('porcentajes/', views.Porcentajes.gestionar_porcentajes, name='porcentajes'),
+    path('porcentajes/create/', views.Porcentajes.crear_porcentajes_legales, name='crear_porcentajes_legales'),
+    path('porcentajes/<int:pk>/update/', views.Porcentajes.actualizar_porcentajes_legales, name='actualizar_porcentajes_legales'),
+    path('porcentajes/', views.Porcentajes.listar_porcentajes_legales, name='listar_porcentajes_legales'),
+    
 ]

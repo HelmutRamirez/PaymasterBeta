@@ -73,60 +73,61 @@
     <div class="contenedor">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="url 'ListarEmpresa'">Empresas</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'ListarEmpresa' %}">Empresas</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'cerrar_sesion_redirect_e' %}">Link</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'cerrar_sesion_redirect_e' %}">Cerrar Sesion</a>
         </li>
       </ul>
 
       {% if request.session.estadoSesion %}
-        {% if request.session.permisos == 'Admin' %}
-          
-            <h1>Editar Uuarios</h1>
+        {% if request.session.permisos == 'Admin' or request.session.permisos == 'RRHHL' %}
+          <h1>Editar Usuarios</h1>
 
-            <div class="search-container">
-              <input type="text" id="search-input" placeholder="Buscar usuarios..." onkeyup="filterUsers()">
-              <br>
+          <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar usuarios..." onkeyup="filterUsers()" />
+            <br />
           </div>
-          <br>
-          <br>
-          
-            <table id="users-table">
-              <thead>
+          <br />
+          <br />
+
+          <table id="users-table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Cedula</th>
+                <th>Nombre Personal</th>
+                <th>Empresa</th>
+                <th>Intentos</th>
+                <th>Estado</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for usuario in usuarios %}
                 <tr>
-                  <th>Usuario</th>
-                  <th>Nombre Personal</th>
-                  <th>Empresa</th>
-                  <th>Intentos</th>
-                  <th>Estado</th>
-                  <th>Rol</th>
-                  <th>Acciones</th>
+                  <td>{{ usuario.id }}</td>
+                  <td>{{ usuario.usuario.numero_identificacion_e }}</td>
+                  <td>{{ usuario.usuario.primer_nombre }} {{ usuario.usuario.primer_apellido }}</td>
+                  <td>{{ usuario.usuario.nit }}</td>
+                  <td>{{ usuario.intentos }}</td>
+                  <td>{{ usuario.estado_u|yesno:'Activo,Inactivo' }}</td>
+                  <td>{{ usuario.rol }}</td>
+                  <td>
+                    <a href="{% url 'editarUsuarioG' usuario.id %}">Editar</a>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {% for usuario in usuarios %}
-                  <tr>
-                    <td>{{ usuario.usuario.numero_identificacion_e }}</td>
-                    <td>{{ usuario.usuario.primer_nombre }}  {{ usuario.usuario.primer_apellido }}</td>
-                    <td>{{ usuario.usuario.nit }}</td>
-                    <td>{{ usuario.intentos }}</td>
-                    <td>{{ usuario.estado_u|yesno:'Activo,Inactivo' }}</td>
-                    <td>{{ usuario.rol }}</td>
-                    <td> 
-                      <a  href="{% url 'editarUsuarioG' usuario.usuario.numero_identificacion_e %}">Editar</a>
-                    </td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-        
+              {% endfor %}
+            </tbody>
+          </table>
+
+          {% if request.session.permisos == 'Admin' %}
+            <div class="volverB">
+              <a class="link" href="{% url 'creacionUsuario' %}">Crear Usuario maestro </a>
+            </div>
+          {% endif %}
         {% else %}
           <h1>El usuario no tiene permisos</h1>
         {% endif %}
