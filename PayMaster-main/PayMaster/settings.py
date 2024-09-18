@@ -11,25 +11,30 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#%k6)#@k_wdt6o1qu%7h6jwi1^re_yreu@=#umsy(1ca=vaq&x'
+SECRET_KEY =  os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
 
-
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    
+    
 # Application definition
-
 INSTALLED_APPS = [
     
     'Independientes.apps.IndependientesConfig',
@@ -56,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     
 ]
 
@@ -82,18 +88,24 @@ WSGI_APPLICATION = 'PayMaster.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-DATABASES = {
+if not DEBUG:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default='postgresql://postgres:postgres@localhost:5432/mysite',
+            conn_max_age=600
+        )
+    }
+else:
+   DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'paymaster',  
         'USER': 'root',                 
         'PASSWORD': '',                         
-        'HOST': '127.0.0.1',                    
+        'HOST': 'localhost',                    
         'PORT': '3306',                          
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -127,12 +139,15 @@ USE_TZ = True
 LANGUAGES = [
     ('es', 'Spanish'),
 ]
+
+
 STATIC_URL = 'static/'
 STATIC_ROOT=BASE_DIR
 STATICFILES_DIRS=[
     "PayMaster/static",
 ]
-
+  
+    
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -146,5 +161,6 @@ EMAIL_HOST_PASSWORD = 'krwj apcj sols uowd'  #  contraseña o clave de acceso
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT=BASE_DIR /'media'
-MEDIA_URL='/media/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -69,32 +70,32 @@
   </head>
 
   <body>
-    <div class="contenedor">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'ListarEmpresa' %}">Empresas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'cerrar_sesion_redirect_e' %}">Cerrar Sesion</a>
-        </li>
-      </ul>
+    {% if request.session.estadoSesion %}
+      {% if request.session.permisos == 'RRHHL' or request.session.permisos == 'Admin' %}
+        <div class="contenedor">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'listar_usuarios' %}">Gestionar Usuarios</a>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cerrar_sesion_redirect_e' %}">Cerrar Sesion</a>
+            </li>
+          </ul>
 
-      {% if request.session.estadoSesion %}
-        {% if request.session.permisos == 'ContadorL' or request.session.permisos == 'Auxiliar Contable' or request.session.permisos == 'Admin' %}
-          <h1>Editar Empresa</h1>
-          <form action="{% url 'actualizarEmpresa' empresa.nit %}" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form }}
-            <button type="submit" id="btnEnviar" class="button">Modificar</button>
+          <h1>"Crear Nuevo Nivel de Grado" </h1>
+          <form method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Guardar</button>
           </form>
-        {% else %}
-          <h1>El usuario no tiene permisos</h1>
-          <a class="link" href="{% url 'loginEmpresa' %}">Iniciar sesión</a>
-        {% endif %}
+        </div>
       {% else %}
-        <h1>El usuario no ha iniciado sesión</h1>
-        <a class="link" href="{% url 'loginEmpresa' %}">Iniciar sesión</a>
+        <h1>El usuario no tiene permisos suficientes</h1>
       {% endif %}
-    </div>
+    {% else %}
+      <h1>El usuario no ha iniciado sesión</h1>
+      <a class="link" href="{% url 'loginEmpresa' %}">Iniciar sesión</a>
+    {% endif %}
   </body>
 </html>

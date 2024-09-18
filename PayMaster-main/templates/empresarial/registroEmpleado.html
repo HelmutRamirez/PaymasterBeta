@@ -15,7 +15,7 @@
       
       function timerIncrement() {
         idleTime++
-        if (idleTime > 400) {
+        if (idleTime > 60) {
           alert('Su sesión ha expirado. Será redirigido para cerrar sesión.')
           window.location.href = "{% url 'cerrar_sesion_redirect_e' %}"
         }
@@ -73,7 +73,7 @@
         <div class="contenedor">
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="url 'ListarEmpresa'">Empresas</a>
+              <a class="nav-link active" aria-current="page" href="{%  url 'ListarEmpresa' %}">Empresas</a>
             </li>
 
             <li class="nav-item">
